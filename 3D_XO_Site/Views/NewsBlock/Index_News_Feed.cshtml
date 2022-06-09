@@ -1,0 +1,24 @@
+﻿@model IEnumerable<_3D_XO_Site.Models.NewsBlock>
+
+@{
+    ViewData["Title"] = "Index_News_Feed";
+}
+
+<h1>News</h1>
+
+<table class="table">
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+                <p></p>
+                (@Html.DisplayFor(modelItem => item.Date))
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Text)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
